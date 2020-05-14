@@ -11,6 +11,8 @@ function upload(event) {
         data: bodyFormData
     })
         .done(data => {
+            console.log(data.url);
+            
             $('.result').append(`<img src="${data.url}">`)
         })
         .fail(err => {
